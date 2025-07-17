@@ -31,12 +31,12 @@
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
     --ring: 240 5.9% 10%;
-    --link-color: 220 70% 60%;
-    --link-color-dark: 220 60% 50%;
-    --link-color-hover: 220 80% 70%;
-    --link-color-hover-dark: 220 70% 60%;
-    --link-color-muted: 220 50% 50%;
-    --link-color-muted-dark: 220 40% 40%;
+    --link-color: 214 100% 18%;
+    --link-color-dark: 214 100% 14%;
+    --link-color-hover: 214 100% 25%;
+    --link-color-hover-dark: 214 100% 22%;
+    --link-color-muted: 214 100% 22%;
+    --link-color-muted-dark: 214 100% 16%;
  
     --radius: 0.5rem;
   }
