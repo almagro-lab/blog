@@ -56,19 +56,19 @@ export function CurrentWork() {
         },
         {
             icon: <Rotate3D className="w-4 h-4" />,
-            text: "Diving into Elixir"
+            text: "Diving into Rust"
         },
         {
             icon: <Cloud className="w-4 h-4" />,
             text: "Learning AWS Machine Learning Tools"
         }]
-        // {
-        //     icon: <BookOpen className="w-4 h-4" />,
-        //     text: "Reading ",
-        //     hyperlink: "/notes/books",
-        //     hyperlinkText: "ML Books",
-        //     endText: ""
-        // }
+    // {
+    //     icon: <BookOpen className="w-4 h-4" />,
+    //     text: "Reading ",
+    //     hyperlink: "/notes/books",
+    //     hyperlinkText: "ML Books",
+    //     endText: ""
+    // }
 
     return (
         <motion.div
@@ -80,14 +80,14 @@ export function CurrentWork() {
                 <TextHeading as="h2">Current Ongoings</TextHeading>
                 <StackVertical gap="md">
                     {items.map((item, index) => (
-                        <WorkItem 
+                        <WorkItem
                             key={index}
                             icon={item.icon}
                             text={item.text}
                             delay={1.2 + index * 0.1}
-                            // hyperlink={item.hyperlink}
-                            // hyperlinkText={item.hyperlinkText}
-                            // endText={item.endText}
+                        // hyperlink={item.hyperlink}
+                        // hyperlinkText={item.hyperlinkText}
+                        // endText={item.endText}
                         />
                     ))}
                 </StackVertical>

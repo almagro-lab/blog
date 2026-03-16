@@ -14,9 +14,9 @@ export async function generateMetadata({ params }: { params: Params }) {
     const { slug } = await params
   
     return {
-      title: `${blogPosts.find(post => post.slug === slug)?.title} | sumit.ml`,
+      title: `${blogPosts.find(post => post.slug === slug)?.title} | pabloalmagro.dev`,
       openGraph: {
-        title: `${blogPosts.find(post => post.slug === slug)?.title} | sumit.ml`,
+        title: `${blogPosts.find(post => post.slug === slug)?.title} | pabloalmagro.dev`,
         description: `${blogPosts.find(post => post.slug === slug)?.description}`,
         images: [
           {
