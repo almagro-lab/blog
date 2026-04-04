@@ -1,9 +1,22 @@
 services:
   web:
-    image: nginx:latest
-    container_name: mi_servidor_nginx
-    ports:
-      - "80:80"
-    volumes:
-      - ./html:/usr/share/nginx/html
+    image: node:20-slim
+    container_name: mi_blog_nextjs
     restart: always
+    # ¡AQUÍ ESTÁ LA MAGIA! Le quitamos los permisos de root
+    user: "node"
+    volumes:
+      - .:/app
+    working_dir: /app
+    environment:
+      - PORT=3000
+      - HOST=0.0.0.0
+    command: sh -c "npm install && npm run build && NODE_ENV=production npm run start"
+
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflared_tunnel
+    restart: always
+    command: tunnel --no-autoupdate run
+    environment:
+      - TUNNEL_TOKEN=$TOKEN
